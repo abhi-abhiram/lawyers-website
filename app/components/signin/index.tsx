@@ -14,11 +14,11 @@ import {
   useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { Logo } from "../../components/Logo";
-import { OAuthButtonGroup } from "../../components/OAuthButtonGroup";
-import { PasswordField } from "../../components/PasswordField";
+import { Logo } from "./Logo";
+import { OAuthButtonGroup } from "./OAuthButtonGroup";
+import { PasswordField } from "./PasswordField";
 
-const App = () => (
+const App = ({ heading }: { heading: string }) => (
   <Container
     maxW="lg"
     py={{ base: "12", md: "24" }}
@@ -29,7 +29,7 @@ const App = () => (
         <Logo />
         <Stack spacing={{ base: "2", md: "3" }} textAlign="center">
           <Heading size={useBreakpointValue({ base: "xs", md: "sm" })}>
-            Log in to your account
+            {heading}
           </Heading>
           <HStack spacing="1" justify="center">
             <Text color="muted">Don't have an account?</Text>
