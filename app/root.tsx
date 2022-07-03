@@ -82,7 +82,10 @@ export default function App() {
   const myTheme = extendTheme(
     {
       colors: { ...theme.colors, brand: theme.colors.blue },
-      initialColorMode: "dark",
+      config: {
+        useSystemColorMode: true,
+        initialColorMode: "dark",
+      },
     },
     theme
   );
